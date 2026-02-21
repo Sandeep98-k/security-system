@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurGuard - Incident Log</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>BMS  FACILITIES</h1>
+            <p>Bms facilities mangment services</p>
+        </header>
+
+        <!-- Report Form -->
+        <div class="card">
+            <h2>Report New Incident</h2>
+            <form id="incidentForm">
+                <div class="form-group">
+                    <label>Guard Name</label>
+                    <input type="text" id="guard_name" required placeholder="e.g. John Doe">
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="location" required placeholder="e.g. North Gate">
+                </div>
+                <div class="form-group">
+                    <label>Type</label>
+                    <select id="type">
+                        <option value="Headguard">Theft</option>
+                        <option value="Suspicious Activity">Suspicious Activity</option>
+                        <option value="Fire Hazard">Fire Hazard</option>
+                        <option value="Maintenance">Maintenance Issue</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="description" rows="3" required></textarea>
+                </div>
+                <button type="submit">Submit Report</button>
+            </form>
+        </div>
+
+        <!-- Incident List -->
+        <div class="card">
+            <h2>Recent Incidents</h2>
+            <div id="incidentList">
+                <!-- Data will load here -->
+                <p>Loading data...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
